@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { gsap, ScrollTrigger } from "../lib/gsap";
-import { processSteps } from "../data/process";
+import { processSteps } from "../data/Process";
 import "./Process.css";
 
 export default function Process() {

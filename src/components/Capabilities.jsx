@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "../lib/gsap";
-import { capabilities } from "../data/capabilities";
+import { capabilities } from "../data/Capabilities";
 import "./Capabilities.css";
 
 export default function Capabilities() {
