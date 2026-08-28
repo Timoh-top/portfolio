@@ -1,3 +1,4 @@
+import schoolbetaImage from "../images/schoolbeta.png";
 export const projects = [
   {
     id: "schoolbeta",
@@ -29,7 +30,7 @@ export const projects = [
       live: "",
       github: "",
     },
-    images: ["/projects/schoolbeta/cover.jpg"],
+    images: [schoolbetaImage],
     featured: true,
   },
 
