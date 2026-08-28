@@ -123,3 +123,11 @@
     display: none;
   }
 }
+
+body.intro-active .hero__eyebrow,
+body.intro-active .hero__headline,
+body.intro-active .hero__stack,
+body.intro-active .hero__actions,
+body.intro-active .hero__scroll-cue {
+  animation-play-state: paused;
+}

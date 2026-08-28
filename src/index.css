@@ -150,6 +150,11 @@ h4 {
   outline-offset: 3px;
 }
 
+body.no-scroll {
+  overflow: hidden;
+  height: 100svh;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
