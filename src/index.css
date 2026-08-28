@@ -1,0 +1,162 @@
+/* ===========================================
+   DESIGN TOKENS
+   =========================================== */
+:root {
+  /* Color */
+  --color-bg: #0a0a0a;
+  --color-bg-elevated: #121212;
+  --color-text: #f4f2ec;
+  --color-text-secondary: #a3a39c;
+  --color-text-tertiary: #6b6b65;
+  --color-accent: #22c278;
+  --color-accent-dim: #14231c;
+  --color-border: rgba(244, 242, 236, 0.08);
+  --color-border-strong: rgba(244, 242, 236, 0.16);
+
+  /* Typography */
+  --font-display: "Clash Display", "Switzer", sans-serif;
+  --font-body: "Switzer", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --text-display-xl: clamp(2.75rem, 3.5vw + 2rem, 7rem);
+  --text-display-lg: clamp(2rem, 2vw + 1.5rem, 3.75rem);
+  --text-display-md: clamp(1.5rem, 1vw + 1.2rem, 2.25rem);
+  --text-body-lg: clamp(1.05rem, 0.3vw + 1rem, 1.25rem);
+  --text-body: 1rem;
+  --text-small: 0.875rem;
+  --text-micro: 0.75rem;
+
+  /* Spacing */
+  --space-section: clamp(4rem, 8vw, 8rem);
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+
+  /* Layout */
+  --container-max: 1400px;
+  --container-padding: clamp(1.5rem, 5vw, 4rem);
+
+  /* Motion */
+  --ease-standard: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 0.2s;
+  --duration-base: 0.4s;
+}
+
+/* ===========================================
+   RESET
+   =========================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100svh;
+  overflow-x: hidden;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* ===========================================
+   TYPOGRAPHY UTILITIES
+   =========================================== */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.text-display-xl {
+  font-size: var(--text-display-xl);
+}
+.text-display-lg {
+  font-size: var(--text-display-lg);
+}
+.text-display-md {
+  font-size: var(--text-display-md);
+}
+
+.text-mono {
+  font-family: var(--font-mono);
+  font-size: var(--text-micro);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+
+/* ===========================================
+   LAYOUT UTILITIES
+   =========================================== */
+.container {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+}
+
+/* ===========================================
+   ACCESSIBILITY
+   =========================================== */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

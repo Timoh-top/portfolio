@@ -1,0 +1,9 @@
+.work {
+  padding-block: var(--space-section);
+}
+
+.work__headline {
+  font-size: var(--text-display-lg);
+  max-width: 20ch;
+  margin-bottom: 1rem;
+}
